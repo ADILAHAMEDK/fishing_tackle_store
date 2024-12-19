@@ -10,7 +10,6 @@ export default {
       colors: {
         navBgWhite:'rgb(221, 221, 221)',
         navColor:'rgb(153, 153, 153)'
-
       }
     },
   },
