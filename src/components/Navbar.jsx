@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import arrowDown3 from '../assets/images/arrowDown3.svg'
