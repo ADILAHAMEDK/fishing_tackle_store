@@ -94,7 +94,7 @@ const Navbar = () => {
             {<img onClick={handleMenu} src= {menu ? tabWhite : tab} alt="img" className='w-[40px] h-[35px] md:hidden' />}
             </div>
 
-            {menu ?<div className='mt-2'>
+            {menu ?<div className='mt-2 max-h-64 border overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-[#de5252] scrollbar-track-gray-200'>
                 <div>
                     <div>
                         <div className='flex  justify-between'>
