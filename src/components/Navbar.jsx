@@ -86,23 +86,25 @@ const Navbar = () => {
         </div>
         </div>
 
-    
         <div className='bg-white px-4 xl:pl-36 py-2 mt-2 relative'>
+            <div className='sm:max-w-3xl md:max-w-4xl lg:max-w-6xl'>
             <div className='flex items-center justify-between'>
+                <div className='w-full md:w-auto flex items-center justify-between'>
             <img src={smallLogo} alt="logo" className='w-[60px] md:hidden' />
             <img src={bigLogo} alt="logo" className='w-[90px] md:w-[100px] xl:w-[150px] hidden md:block absolute -top-[41.50px] md:-top-[45.20px] xl:-top-[63px]' />
             {<img onClick={handleMenu} src= {menu ? tabWhite : tab} alt="img" className='w-[40px] h-[35px] md:hidden' />}
-            </div>
-
-            {menu ?<div className='mt-2 max-h-72 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-[#de5252] scrollbar-track-gray-200'>
-                <div>
+                </div>
+          
+            {/* big screen */}
+            <div className='hidden md:block'>
+            <div className='flex items-center gap-3 lg:gap-4'>
                     <div>
-                        <div className='flex  justify-between'>
-                            <div className='flex items-center gap-2'>
-                            <span className='text-[#666]'>Reels</span>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2 pt-3'>
+                            <span className='text-[#666] text-xs lg:text-lg'>Reels</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
-                            <div onClick={()=>handleSubMenu("reels")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]'>
+                            <div onClick={()=>handleSubMenu("reels")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
                             <img src={subMenu ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
                             </div>
                         </div>
@@ -115,9 +117,353 @@ const Navbar = () => {
                     </div>
 
                     <div className='mt-3'>
-                        <div className='flex  justify-between'>
+                        <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666]'>Rod</span>
+                            <span className='text-[#666] text-xs lg:text-lg'>Rod</span>
+                            <img src={tabArrowDown} alt="img" className='w-3' />
+                            </div>
+                            <div onClick={()=>handleSubMenu("rod")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
+                            <img src={rod ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
+                            </div>
+                        </div>
+                        {rod ? <div className='mt-5 pl-8'>
+                            <div className=''>
+                                <span className='block mb-7 text-black text-sm'>Spinning Rod</span>
+                                <span className='block mb-7 text-black text-sm'>Baitcasting Rod</span>
+                                <span className='block mb-7 text-black text-sm'>Popping Rod</span>
+                                <span className='block mb-7 text-black text-sm'>Jigging Rod</span>
+                                <span className='block mb-7 text-black text-sm'>Surf Casting Rod</span>
+                                <span className='block mb-7 text-black text-sm'>Telescopic Rod</span>
+                                <span className='block mb-7 text-black text-sm'>Pole Rod</span>
+                                <span className='block text-black text-sm'>Travel Rod</span>
+                            </div>
+                        </div> : null}
+                    </div>
+
+                    <div className='mt-3'>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2'>
+                            <span className='text-[#666] text-xs lg:text-lg'>Line</span>
+                            <img src={tabArrowDown} alt="img" className='w-3' />
+                            </div>
+                            <div onClick={()=>handleSubMenu("line")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
+                            <img src={line ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
+                            </div>
+                        </div>
+                        {line ? <div className='mt-5 pl-8'>
+                            <div className=''>
+                                <span className='block mb-7 text-black text-sm'>Braided Line</span>
+                                <span className='block mb-7 text-black text-sm'>Monofilament</span>
+                                <span className='block mb-7 text-black text-sm'>Fluorocarbon Line</span>
+                                <span className='block text-black text-sm'>Wire Leader</span>
+                            </div>
+                        </div> : null}
+                    </div>
+
+                    <div className='mt-3'>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2'>
+                            <span className='text-[#666] text-xs lg:text-lg'>Lure</span>
+                            <img src={tabArrowDown} alt="img" className='w-3' />
+                            </div>
+                            <div onClick={()=>handleSubMenu("lore")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
+                            <img src={lore ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
+                            </div>
+                        </div>
+                        {lore ? <div className='mt-5 pl-8'>
+                            <div className=''>
+                                <span className='block mb-7 text-black text-sm'>Hard Lures</span>
+                                <span className='block mb-7 text-black text-sm'>Soft Lures / Shad</span>
+                                <span className='block mb-7 text-black text-sm'>Metal Jigs</span>
+                                <span className='block mb-7 text-black text-sm'>Spoon Lures</span>
+                                <span className='block mb-7 text-black text-sm'>Spinner Lures</span>
+                                <span className='block mb-7 text-black text-sm'>Shrimp Lures</span>
+                                <span className='block mb-7 text-black text-sm'>Frog Lures</span>
+                                <span className='block mb-7 text-black text-sm'>Sabiki</span>
+                                <span className='block mb-7 text-black text-sm'>Squid Lures</span>
+                                <span className='block text-black text-sm'>Ultra Light</span>
+                            </div>
+                        </div> : null}
+                    </div>
+
+                    <div className='mt-3'>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2'>
+                            <span className='text-[#666] text-xs lg:text-lg'>Accessories</span>
+                            <img src={tabArrowDown} alt="img" className='w-3' />
+                            </div>
+                            <div onClick={()=>handleSubMenu("accessories")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
+                            <img src={accessories ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
+                            </div>
+                        </div>
+                        {accessories ? <div className='mt-5 pl-8'>
+                            <div className=''>
+                                <span className='block mb-7 text-black text-sm'>Fishing Bag</span>
+                                <span className='block mb-7 text-black text-sm'>Lip Gripper</span>
+                                <span className='block mb-7 text-black text-sm'>Fish Pliers</span>
+                                <span className='block mb-7 text-black text-sm'>Scissors</span>
+                                <span className='block mb-7 text-black text-sm'>Split Ring Pliers</span>
+                                <span className='block mb-7 text-black text-sm'>Rod Band</span>
+                                <span className='block mb-7 text-black text-sm'>Rod Sleeve</span>
+                                <span className='block mb-7 text-black text-sm'>Fish Scaler</span>
+                                <span className='block mb-7 text-black text-sm'>Line Clipper</span>
+                                <span className='block mb-7 text-black text-sm'>Knife</span>
+                                <span className='block mb-7 text-black text-sm'>Spool Band</span>
+                                <span className='block mb-7 text-black text-sm'>Reel Case</span>
+                                <span className='block mb-7 text-black text-sm'>Lure Box</span>
+                                <span className='block mb-7 text-black text-sm'>HeadLamp</span>
+                                <span className='block mb-7 text-black text-sm'>Bobbin Knotter</span>
+                                <span className='block mb-7 text-black text-sm'>Belt</span>
+                                <span className='block mb-7 text-black text-sm'>Grease And Oil</span>
+                                <span className='block mb-7 text-black text-sm'>Others</span>
+                                <span className='block mb-7 text-black text-sm'>Line Cutter</span>
+                                <span className='block mb-7 text-black text-sm'>Reel Strap</span>
+                                <span className='block mb-7 text-black text-sm'>Landing Net</span>
+                                <span className='block mb-7 text-black text-sm'>Rod Stand</span>
+                                <span className='block mb-7 text-black text-sm'>Safety Covers</span>
+                                <span className='block mb-7 text-black text-sm'>Line Counter</span>
+                                <span className='block mb-7 text-black text-sm'>Reel Knob</span>
+                                <span className='block mb-7 text-black text-sm'>Reel Stand</span>
+                                <span className='block text-black text-sm'>Line Cutter</span>
+                            </div>
+                        </div> : null}
+                    </div>
+
+                    
+                    <div className='mt-3'>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2'>
+                            <span className='text-[#666] text-xs lg:text-lg'>Terminal Tackle</span>
+                            <img src={tabArrowDown} alt="img" className='w-3' />
+                            </div>
+                            <div onClick={()=>handleSubMenu("terminal")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
+                            <img src={terminal ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
+                            </div>
+                        </div>
+                        {terminal ? <div className='mt-5 pl-8'>
+                            <div className=''>
+                                <span className='block mb-7 text-black text-sm'>Swivel & Snaps</span>
+                                <span className='block mb-7 text-black text-sm'>Hooks</span>
+                                <span className='block mb-7 text-black text-sm'>Treble Hook</span>
+                                <span className='block mb-7 text-black text-sm'>In-Line Hook</span>
+                                <span className='block mb-7 text-black text-sm'>Jig Heads</span>
+                                <span className='block mb-7 text-black text-sm'>Weedless Hooks</span>
+                                <span className='block mb-7 text-black text-sm'>Assist Hooks</span>
+                                <span className='block mb-7 text-black text-sm'>Split Ring</span>
+                                <span className='block mb-7 text-black text-sm'>Lead Weight</span>
+                                <span className='block mb-7 text-black text-sm'>Weighted Worm Hook</span>
+                                <span className='block mb-7 text-black text-sm'>Assist Cord</span>
+                                <span className='block mb-7 text-black text-sm'>Fastach</span>
+                                <span className='block mb-7 text-black text-sm'>Worm Weight</span>
+                                <span className='block mb-7 text-black text-sm'>Jawlock</span>
+                                <span className='block mb-7 text-black text-sm'>Others</span>
+                                <span className='block mb-7 text-black text-sm'>Sinker</span>
+                                <span className='block mb-7 text-black text-sm'>Carp Hooks</span>
+                                <span className='block mb-7 text-black text-sm'>Jigging Hooks</span>
+                            </div>
+                        </div> : null}
+                    </div>
+
+                    <div className='mt-3'>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2'>
+                            <span className='text-[#666] text-xs lg:text-lg'>Apparel</span>
+                            <img src={tabArrowDown} alt="img" className='w-3' />
+                            </div>
+                            <div onClick={()=>handleSubMenu("apparel")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
+                            <img src={apparel ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
+                            </div>
+                        </div>
+                        {apparel ? <div className='mt-5 pl-8'>
+                            <div className=''>
+                                <span className='block mb-7 text-black text-sm'>Gloves</span>
+                                <span className='block mb-7 text-black text-sm'>T-Shirt</span>
+                                <span className='block mb-7 text-black text-sm'>Hat</span>
+                                <span className='block mb-7 text-black text-sm'>Neck Gaiter</span>
+                                <span className='block mb-7 text-black text-sm'>Arm Sleeves</span>
+                                <span className='block text-black text-sm'>Sunglasses</span>
+                            </div>
+                        </div> : null}
+                    </div>
+
+                    <div className='mt-3'>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2'>
+                            <span className='text-[#666] text-xs lg:text-lg'>Brand</span>
+                            <img src={tabArrowDown} alt="img" className='w-3' />
+                            </div>
+                            <div onClick={()=>handleSubMenu("brand")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
+                            <img src={brand ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
+                            </div>
+                        </div>
+                        {brand ? <div className='mt-5 pl-8'>
+                            <div className=''>
+                                <span className='block mb-7 text-black text-sm'>Shimano</span>
+                                <span className='block mb-7 text-black text-sm'>Daiwa</span>
+                                <span className='block mb-7 text-black text-sm'>Zerek</span>
+                                <span className='block mb-7 text-black text-sm'>Tackle House</span>
+                                <span className='block mb-7 text-black text-sm'>Zman</span>
+                                <span className='block mb-7 text-black text-sm'>Ima Japen</span>
+                                <span className='block mb-7 text-black text-sm'>Megabass</span>
+                                <span className='block mb-7 text-black text-sm'>Duo</span>
+                                <span className='block mb-7 text-black text-sm'>Maria</span>
+                                <span className='block mb-7 text-black text-sm'>Apia</span>
+                                <span className='block mb-7 text-black text-sm'>Scaless</span>
+                                <span className='block mb-7 text-black text-sm'>Savage Gear</span>
+                                <span className='block mb-7 text-black text-sm'>Chasebait</span>
+                                <span className='block mb-7 text-black text-sm'>Bkk</span>
+                                <span className='block mb-7 text-black text-sm'>Pelagictribe</span>
+                                <span className='block mb-7 text-black text-sm'>Big Bite Baits</span>
+                                <span className='block mb-7 text-black text-sm'>Duel Hardcore</span>
+                                <span className='block mb-7 text-black text-sm'>Molix</span>
+                                <span className='block mb-7 text-black text-sm'>Mustad</span>
+                                <span className='block mb-7 text-black text-sm'>Hayabusa</span>
+                                <span className='block mb-7 text-black text-sm'>6th Sense</span>
+                                <span className='block mb-7 text-black text-sm'>Lure Factory</span>
+                                <span className='block mb-7 text-black text-sm'>Prohunter</span>
+                                <span className='block mb-7 text-black text-sm'>Snagproof</span>
+                                <span className='block mb-7 text-black text-sm'>Scum Frog</span>
+                                <span className='block mb-7 text-black text-sm'>Yo-Zuri</span>
+                                <span className='block mb-7 text-black text-sm'>Booyah</span>
+                                <span className='block mb-7 text-black text-sm'>Sunline</span>
+                                <span className='block mb-7 text-black text-sm'>Yum</span>
+                                <span className='block mb-7 text-black text-sm'>Lucky Jhon</span>
+                                <span className='block mb-7 text-black text-sm'>Halco</span>
+                                <span className='block mb-7 text-black text-sm'>Okuma</span>
+                                <span className='block mb-7 text-black text-sm'>Storm</span>
+                                <span className='block mb-7 text-black text-sm'>Heddon</span>
+                                <span className='block mb-7 text-black text-sm'>Rapala</span>
+                                <span className='block mb-7 text-black text-sm'>Major Craft</span>
+                                <span className='block mb-7 text-black text-sm'>Spro</span>
+                                <span className='block mb-7 text-black text-sm'>Power Pro</span>
+                                <span className='block mb-7 text-black text-sm'>Benthic</span>
+                                <span className='block mb-7 text-black text-sm'>Crimson</span>
+                                <span className='block mb-7 text-black text-sm'>Live Target</span>
+                                <span className='block mb-7 text-black text-sm'>Berkley</span>
+                                <span className='block mb-7 text-black text-sm'>Keitech</span>
+                                <span className='block mb-7 text-black text-sm'>Bait Breath</span>
+                                <span className='block mb-7 text-black text-sm'>Noeby</span>
+                                <span className='block mb-7 text-black text-sm'>Sure Catch</span>
+                                <span className='block mb-7 text-black text-sm'>Freedom</span>
+                                <span className='block mb-7 text-black text-sm'>Sth</span>
+                                <span className='block mb-7 text-black text-sm'>Gfin</span>
+                                <span className='block mb-7 text-black text-sm'>Jackson</span>
+                                <span className='block mb-7 text-black text-sm'>Cassan</span>
+                                <span className='block mb-7 text-black text-sm'>Ygk</span>
+                                <span className='block mb-7 text-black text-sm'>Atc</span>
+                                <span className='block mb-7 text-black text-sm'>Feed</span>
+                                <span className='block mb-7 text-black text-sm'>Pro Trust</span>
+                                <span className='block mb-7 text-black text-sm'>Strike pro</span>
+                                <span className='block mb-7 text-black text-sm'>Sufix</span>
+                                <span className='block mb-7 text-black text-sm'>Gillies</span>
+                                <span className='block mb-7 text-black text-sm'>Vudu</span>
+                                <span className='block mb-7 text-black text-sm'>Egret Baits</span>
+                                <span className='block mb-7 text-black text-sm'>River2sea</span>
+                                <span className='block mb-7 text-black text-sm'>Kastking</span>
+                                <span className='block mb-7 text-black text-sm'>Bomber</span>
+                                <span className='block mb-7 text-black text-sm'>Stryker</span>
+                                <span className='block mb-7 text-black text-sm'>Jabbers</span>
+                                <span className='block mb-7 text-black text-sm'>Yamashita</span>
+                                <span className='block mb-7 text-black text-sm'>Pioneer</span>
+                                <span className='block mb-7 text-black text-sm'>Pro Marine</span>
+                                <span className='block mb-7 text-black text-sm'>Trigger x</span>
+                                <span className='block mb-7 text-black text-sm'>Meiho</span>
+                                <span className='block mb-7 text-black text-sm'>Abu Gracia</span>
+                                <span className='block mb-7 text-black text-sm'>Sea Falcon</span>
+                                <span className='block mb-7 text-black text-sm'>Meredith</span>
+                                <span className='block mb-7 text-black text-sm'>Xesta</span>
+                                <span className='block mb-7 text-black text-sm'>Onlite</span>
+                                <span className='block mb-7 text-black text-sm'>Penn</span>
+                                <span className='block mb-7 text-black text-sm'>Gamakastu</span>
+                                <span className='block mb-7 text-black text-sm'>Triple Fish</span>
+                                <span className='block mb-7 text-black text-sm'>Hart</span>
+                                <span className='block mb-7 text-black text-sm'>Superline</span>
+                                <span className='block mb-7 text-black text-sm'>Eupro</span>
+                                <span className='block mb-7 text-black text-sm'>Gt Ice Cream</span>
+                                <span className='block mb-7 text-black text-sm'>Seaguar</span>
+                                <span className='block mb-7 text-black text-sm'>Bassday</span>
+                                <span className='block mb-7 text-black text-sm'>Jhinga</span>
+                                <span className='block mb-7 text-black text-sm'>Hawas</span>
+                                <span className='block mb-7 text-black text-sm'>Searock</span>
+                                <span className='block mb-7 text-black text-sm'>Jackall</span>
+                                <span className='block mb-7 text-black text-sm'>Generic</span>
+                                <span className='block mb-7 text-black text-sm'>Decoy</span>
+                                <span className='block mb-7 text-black text-sm'>Wilson Fishing</span>
+                                <span className='block mb-7 text-black text-sm'>VMC</span>
+                                <span className='block mb-7 text-black text-sm'>Owner</span>
+                                <span className='block mb-7 text-black text-sm'>Terry</span>
+                                <span className='block mb-7 text-black text-sm'>Luregenix</span>
+                                <span className='block mb-7 text-black text-sm'>Ironman</span>
+                                <span className='block mb-7 text-black text-sm'>JK</span>
+                                <span className='block mb-7 text-black text-sm'>BTX</span>
+                                <span className='block mb-7 text-black text-sm'>A Band Of Anglers</span>
+                                <span className='block mb-7 text-black text-sm'>Shakespheare</span>
+                                <span className='block mb-7 text-black text-sm'>X-Braid</span>
+                                <span className='block mb-7 text-black text-sm'>Fuji</span>
+                                <span className='block mb-7 text-black text-sm'>Orgin</span>
+                                <span className='block mb-7 text-black text-sm'>Gomexus</span>
+                                <span className='block mb-7 text-black text-sm'>Costline</span>
+                                <span className='block text-black text-sm'>Sea-Lion</span>
+                            </div>
+                        </div> : null}
+                    </div>
+
+                    
+                    <div className='mt-3'>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2'>
+                            <span className='text-[#666] text-xs lg:text-lg'>New Arrivals</span>
+                            <img src={tabArrowDown} alt="img" className='w-3' />
+                            </div>
+                            <div onClick={()=>handleSubMenu("arrivals")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
+                            <img src={arrival ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
+                            </div>
+                        </div>
+                        {arrival ? <div className='mt-5 pl-8'>
+                            <div className=''>
+                                <span className='block mb-7 text-black text-sm'>Reels</span>
+                                <span className='block mb-7 text-black text-sm'>Rod</span>
+                                <span className='block mb-7 text-black text-sm'>Line</span>
+                                <span className='block mb-7 text-black text-sm'>Lure</span>
+                                <span className='block mb-7 text-black text-sm'>Accessories</span>
+                                <span className='block mb-7 text-black text-sm'>Terminal Tackle</span>
+                                <span className='block text-black text-sm'>Apparel</span>
+                            </div>
+                        </div> : null}
+                    </div>
+
+                    <span className='block mt-3 text-[#666] md:hidden'>Tackle Tips</span>
+                    <span className='block mt-3 text-[#666] md:hidden'>Fishing Reports</span>
+                </div>
+            </div>
+            </div>
+            </div>
+        
+            {/* small screen menu bar */}
+            {menu ?<div className='mt-2 md:mt-0 md:hidden md:mx-auto max-h-72 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-[#de5252] scrollbar-track-gray-200'>
+                <div className='md:flex items-center justify-between'>
+                    <div>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2'>
+                            <span className='text-[#666] text-sm'>Reels</span>
+                            <img src={tabArrowDown} alt="img" className='w-3' />
+                            </div>
+                            <div onClick={()=>handleSubMenu("reels")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
+                            <img src={subMenu ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
+                            </div>
+                        </div>
+                        {subMenu ? <div className='mt-5 pl-8'>
+                            <div className=''>
+                                <span className='block mb-7 text-black text-sm'>Spinning Reel</span>
+                                <span className='block text-black text-sm'>Baitcasting Reel</span>
+                            </div>
+                        </div> : null}
+                    </div>
+
+                    <div className='mt-3'>
+                        <div className='flex items-center justify-between'>
+                            <div className='flex items-center gap-2'>
+                            <span className='text-[#666] text-sm'>Rod</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                             <div onClick={()=>handleSubMenu("rod")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]'>
@@ -139,9 +485,9 @@ const Navbar = () => {
                     </div>
 
                     <div className='mt-3'>
-                        <div className='flex  justify-between'>
+                        <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666]'>Line</span>
+                            <span className='text-[#666] text-sm'>Line</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                             <div onClick={()=>handleSubMenu("line")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]'>
@@ -159,9 +505,9 @@ const Navbar = () => {
                     </div>
 
                     <div className='mt-3'>
-                        <div className='flex  justify-between'>
+                        <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666]'>Lure</span>
+                            <span className='text-[#666] text-sm'>Lure</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                             <div onClick={()=>handleSubMenu("lore")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]'>
@@ -185,9 +531,9 @@ const Navbar = () => {
                     </div>
 
                     <div className='mt-3'>
-                        <div className='flex  justify-between'>
+                        <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666]'>Accessories</span>
+                            <span className='text-[#666] text-sm'>Accessories</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                             <div onClick={()=>handleSubMenu("accessories")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]'>
@@ -229,9 +575,9 @@ const Navbar = () => {
 
                     
                     <div className='mt-3'>
-                        <div className='flex  justify-between'>
+                        <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666]'>Terminal Tackle</span>
+                            <span className='text-[#666] text-sm'>Terminal Tackle</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                             <div onClick={()=>handleSubMenu("terminal")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]'>
@@ -263,9 +609,9 @@ const Navbar = () => {
                     </div>
 
                     <div className='mt-3'>
-                        <div className='flex  justify-between'>
+                        <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666]'>Apparel</span>
+                            <span className='text-[#666] text-sm'>Apparel</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                             <div onClick={()=>handleSubMenu("apparel")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]'>
@@ -285,9 +631,9 @@ const Navbar = () => {
                     </div>
 
                     <div className='mt-3'>
-                        <div className='flex  justify-between'>
+                        <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666]'>Brand</span>
+                            <span className='text-[#666] text-sm'>Brand</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                             <div onClick={()=>handleSubMenu("brand")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]'>
@@ -408,12 +754,12 @@ const Navbar = () => {
 
                     
                     <div className='mt-3'>
-                        <div className='flex  justify-between'>
+                        <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666]'>New Arrivals</span>
+                            <span className='text-[#666] text-sm'>New Arrivals</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
-                            <div onClick={()=>handleSubMenu("arrivals")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]'>
+                            <div onClick={()=>handleSubMenu("arrivals")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
                             <img src={arrival ?  arrowDown3 : arrowRightIcon} alt="img" className='w-3' />
                             </div>
                         </div>
@@ -431,8 +777,52 @@ const Navbar = () => {
                     </div>
 
                     <span className='block mt-3 text-[#666]'>Tackle Tips</span>
+                    <span className='block mt-3 text-[#666]'>Fishing Reports</span>
                 </div>
             </div>: null}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
   )
