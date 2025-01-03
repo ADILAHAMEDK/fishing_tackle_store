@@ -175,7 +175,7 @@ const Navbar = () => {
                     <div className='mt-3 relative group'>
                         <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666] text-xs lg:text-lg'>Accessories</span>
+                            <span className='text-[#666] text-xs lg:text-lg hover:text-red-400'>Accessories</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                         </div>
@@ -214,7 +214,7 @@ const Navbar = () => {
                     <div className='mt-3 relative group'>
                         <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666] text-xs lg:text-lg'>Terminal Tackle</span>
+                            <span className='text-[#666] text-xs lg:text-lg hover:text-red-400'>Terminal Tackle</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                         </div>
@@ -243,7 +243,7 @@ const Navbar = () => {
                     <div className='mt-3 relative group'>
                         <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666] text-xs lg:text-lg'>Apparel</span>
+                            <span className='text-[#666] text-xs lg:text-lg hover:text-red-400'>Apparel</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                         </div>
@@ -260,7 +260,7 @@ const Navbar = () => {
                     <div className='mt-3 relative group'>
                         <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666] text-xs lg:text-lg'>Brand</span>
+                            <span className='text-[#666] text-xs lg:text-lg hover:text-red-400'>Brand</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                         </div>
@@ -378,7 +378,7 @@ const Navbar = () => {
                     <div className='mt-3'>
                         <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                            <span className='text-[#666] text-xs lg:text-lg'>New Arrivals</span>
+                            <span className='text-[#666] text-xs lg:text-lg hover:text-red-400'>New Arrivals</span>
                             <img src={tabArrowDown} alt="img" className='w-3' />
                             </div>
                             <div onClick={()=>handleSubMenu("arrivals")} className='px-3 py-[10px] bg-[#ededed] rounded-[1px]  md:hidden'>
